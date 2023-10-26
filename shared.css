@@ -4,6 +4,52 @@
 	padding: 0;
 }
 
+:root {
+	--text-col: whitesmoke;
+	--background-col: #101518;
+	--accent-col: #b042ff;
+}
+
 body {
 	font-family: 'Roboto', sans-serif;
+	color: var(--text-col);
+	background-color: var(--background-col);
+}
+
+.main-header {
+	height: 3rem;
+	background-color: var(--accent-col);
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.main-header__div {
+	height: 100%;
+	width: 100%;
+	padding: 0.5rem;
+
+	display: flex;
+	align-self: left;
+}
+
+main {
+	display: grid;
+	place-items: center;
+
+	height: 100dvh;
+}
+
+.card {
+	border: 2px solid hotpink;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.card form {
+	display: flex;
+	flex-direction: column; 
 }
