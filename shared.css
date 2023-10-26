@@ -12,11 +12,13 @@
 	--accent-col: #b042ff;
 	--accent-col-active: #b042ff9f;
 
-	--progress-col: rgb(24, 209, 24);
+	--progress-col: rgb(25, 165, 25);
 	--completed-col: rgb(115, 115, 232);
 	--hold-col: rgb(255, 204, 0);
 	--issue-col: red;
 	--extend-col: orange;
+
+	--shadow: -1px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 body {
@@ -81,46 +83,45 @@ body {
 	padding: 0.75rem;
 	width: 12rem;
 	font-size: 0.8rem;
+	font-weight: 500;
 }
 
 /* name, type, priority, deadline, status */
 
 .ticket__name {
 	font-size: 1.1rem;
-	margin-bottom: 0.5rem;
+	margin-bottom: 0.75rem;
 	background-color: var(--background-col-light);
 	border-radius: 10px;
 	padding: 0.4rem 0.6rem;
+	box-shadow: -1px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .ticket__type {
 	width: fit-content;
-	background-color: rgb(113, 110, 110);
+	background-color: hsl(0, 0%, 10%);
 	padding: 0.2rem 0.5rem;
 	border-radius: 100rem;
-	border: 1px solid white;
+	border: 2px solid white;
 	margin-bottom: 0.75rem;
 }
 
 .ticket__priority {
-	color: rgb(219, 18, 18);
-	font-weight: 500;
 	padding: 0.2rem 0.5rem;
 	border-radius: 100rem;
-	border: 1px solid rgb(219, 18, 18);
+	border: 2px solid hsl(0, 85%, 45%);
+	background-color: hsl(0, 85%, 7%);
 	margin-bottom: 0.75rem;
 	width: fit-content;
 }
 
 .ticket__deadline {
 	margin-bottom: 0.75rem;
-}
-
-.ticket__date {
 	padding: 0.2rem 0.5rem;
 	border-radius: 100rem;
-	border: 1px solid white;
-	margin-bottom: 0.5rem;
+	border: 2px solid hsl(222, 88%, 48%);
+	background-color: hsl(222, 88%, 10%);
+	width: fit-content;
 }
 
 .ticket__status {
@@ -128,7 +129,7 @@ body {
 	margin-bottom: 0.5rem;
 	padding: 0.2rem 0.5rem;
 	border-radius: 100rem;
-	border: 1px solid var(--hold-col);
+	border: 2px solid var(--hold-col);
 	margin-bottom: 0.75rem;
 	background-color: hsl(48, 100%, 10%);
 }
