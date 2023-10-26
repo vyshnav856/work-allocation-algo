@@ -34,6 +34,15 @@
   border:2px solid var(--accent-col);
   -webkit-appearance: button;
   appearance: button;
+  
+}
+.box select option{
+  color: var(--accent-col);
+  font-weight: 700;
+  padding: 0.5rem; 
+}
+.box option:hover{
+  background-color: aqua;
 }
 
 
