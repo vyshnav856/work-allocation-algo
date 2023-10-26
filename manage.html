@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Manage Tasks</title>
+		<link rel="stylesheet" href="shared.css">
+		<link rel="stylesheet" href="manage.css">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+		<script defer src="manage.js"></script>
+	</head>
+
+	<body>
+		<header class="main-header">
+			<div class="main-header__div">
+				<h2 class="main-header__title">Work Allocator</h2>
+
+				<p class="main-header__username">usename 
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 chev">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+				  	</svg>
+				</p>
+			</div>
+		</header>
+
+		<main>
+			<div class="ticket-tab">
+				<div class="ticket-tab__progress">In Progress 	<span class="ticket-tab__progress-value"><p>0</p></span></div>
+				<div class="ticket-tab__completed">Completed 	<span class="ticket-tab__completed-value"><p>0</p></span></div>
+				<div class="ticket-tab__hold">On Hold		<span class="ticket-tab__hold-value"><p>0</p></span></div>
+				<div class="ticket-tab__issue">Issue Reported 	<span class="ticket-tab__issue-value"><p>0</p></span></div>
+				<div class="ticket-tab__extend">Deadline Extension 	<span class="ticket-tab__extend-value"><p>0</p></span></div>
+			</div>
+
+			<div class="ticket-panel-container">
+				<h2>Tickets in progress</h2>
+
+				<div class="ticket-panel">
+					<div class="ticket">
+						<h3 class="ticket__name">Ticket name</h3>
+
+						<p class="ticket__type">Bugfix</p>
+
+						<p class="ticket__priority">High Priority</p>
+
+						<p class="ticket__deadline">Deadline: <span class="ticket__date">2023-1-1</span></p>
+
+						<p class="ticket__status">Pending</p>
+
+						<a class="ticket__details">Details</a>
+					</div>
+					
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

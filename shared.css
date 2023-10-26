@@ -7,8 +7,16 @@
 :root {
 	--text-col: whitesmoke;
 	--background-col: hsl(203, 20%, 8%);
+	--background-col-light: hsl(202, 22%, 12%);
+	--background-col-lighter: hsl(202, 22%, 16%);  
 	--accent-col: #b042ff;
 	--accent-col-active: #b042ff9f;
+
+	--progress-col: rgb(24, 209, 24);
+	--completed-col: rgb(115, 115, 232);
+	--hold-col: rgb(255, 204, 0);
+	--issue-col: red;
+	--extend-col: orange;
 }
 
 body {
@@ -29,21 +37,16 @@ body {
 
 .main-header__div {
 	height: 100%;
-	width: 100%;
+	width: 98%;
 	padding: 0.5rem;
 
 	display: flex;
-	align-self: left;
+	justify-content: left;
+	align-items: center;
 }
 
 .main-header__title {
 	font-size: 1.4rem;
-}
-
-main {
-	display: grid;
-	place-items: center;
-	height: 100dvh;
 }
 
 .but {
@@ -69,4 +72,73 @@ main {
 
 .login-form__create:hover {
 	text-decoration: underline;
+}
+
+.ticket {
+	background-color: var(--background-col-lighter);
+	box-shadow: -1px 2px 5px rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+	padding: 0.75rem;
+	width: 12rem;
+	font-size: 0.8rem;
+}
+
+/* name, type, priority, deadline, status */
+
+.ticket__name {
+	font-size: 1.1rem;
+	margin-bottom: 0.5rem;
+	background-color: var(--background-col-light);
+	border-radius: 10px;
+	padding: 0.4rem 0.6rem;
+}
+
+.ticket__type {
+	width: fit-content;
+	background-color: rgb(113, 110, 110);
+	padding: 0.2rem 0.5rem;
+	border-radius: 100rem;
+	border: 1px solid white;
+	margin-bottom: 0.75rem;
+}
+
+.ticket__priority {
+	color: rgb(219, 18, 18);
+	font-weight: 500;
+	padding: 0.2rem 0.5rem;
+	border-radius: 100rem;
+	border: 1px solid rgb(219, 18, 18);
+	margin-bottom: 0.75rem;
+	width: fit-content;
+}
+
+.ticket__deadline {
+	margin-bottom: 0.75rem;
+}
+
+.ticket__date {
+	padding: 0.2rem 0.5rem;
+	border-radius: 100rem;
+	border: 1px solid white;
+	margin-bottom: 0.5rem;
+}
+
+.ticket__status {
+	width: fit-content;
+	margin-bottom: 0.5rem;
+	padding: 0.2rem 0.5rem;
+	border-radius: 100rem;
+	border: 1px solid var(--hold-col);
+	margin-bottom: 0.75rem;
+	background-color: hsl(48, 100%, 10%);
+}
+
+.ticket__details {
+	font-weight: 500;
+	color: rgb(117, 103, 212);
+}
+
+.ticket__details:hover {
+	text-decoration: underline;
+	cursor: pointer;
 }
