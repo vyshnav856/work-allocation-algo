@@ -6,8 +6,9 @@
 
 :root {
 	--text-col: whitesmoke;
-	--background-col: #101518;
+	--background-col: hsl(203, 20%, 8%);
 	--accent-col: #b042ff;
+	--accent-col-active: #b042ff9f;
 }
 
 body {
@@ -17,7 +18,7 @@ body {
 }
 
 .main-header {
-	height: 3rem;
+	/* height: 3rem; */
 	background-color: var(--accent-col);
 
 	position: fixed;
@@ -35,21 +36,37 @@ body {
 	align-self: left;
 }
 
+.main-header__title {
+	font-size: 1.4rem;
+}
+
 main {
 	display: grid;
 	place-items: center;
-
 	height: 100dvh;
 }
 
-.card {
-	border: 2px solid hotpink;
-
-	display: flex;
-	flex-direction: column;
+.but {
+	background-color: var(--accent-col);
+	width: fit-content;
+	padding: 0.4rem 3rem;
+	color: var(--text-col);
+	border: none;
+	border-radius: 10px;
+	font-weight: 700;
+	cursor: pointer;
 }
 
-.card form {
-	display: flex;
-	flex-direction: column; 
+.but:active {
+	background-color: var(--accent-col-active)
+}
+
+.login-form__create {
+	font-size: 0.8rem;
+	text-decoration: none;
+	color: #00add8;
+}
+
+.login-form__create:hover {
+	text-decoration: underline;
 }
