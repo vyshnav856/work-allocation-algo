@@ -18,4 +18,46 @@
   font-weight: 700;
   border: 6px solid transparent;
   padding: 2rem;
+  text-indent: 2rem; 
 }
+
+
+
+.box select {
+  background-color:hsl(203, 20%, 10%);
+  color: white;
+  font-weight: 700;
+  padding: 12px;
+  width:13.3rem;
+  
+  border-radius: 10px;
+  border:2px solid var(--accent-col);
+  -webkit-appearance: button;
+  appearance: button;
+}
+
+
+.box::before {
+  content: "\f13a";
+  font-family: FontAwesome;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  font-size: 28px;
+  line-height: 45px;
+  pointer-events: none;
+}
+
+
+
+.box select option {
+  padding: 1rem;
+  
+}
+
+
+
+
