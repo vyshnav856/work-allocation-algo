@@ -1,0 +1,136 @@
+.main-header__div {
+	justify-content: space-between;
+	align-items: center;
+}
+
+.main-header__username {
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.main-header__username:hover {
+	font-weight: 700;
+}
+
+.chev {
+	width: 1rem;
+	transform: translate(1px, 3px)
+}
+
+main {
+	margin-top: 4rem;
+}
+
+.ticket-tab {
+	max-width: 18rem;
+	min-height: 2rem;
+	margin: 0 auto;
+	padding: 0.5rem 1rem;
+	border-radius: 10px;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	background-color: var(--background-col-light);
+}
+
+.ticket-tab div {
+	background-color: var(--background-col-lighter);
+	padding: 0.2rem 0.6rem;
+	border-radius: 10px;
+	font-weight: 500;
+}
+
+.ticket-tab div span {
+	border-radius: 50%;
+	color: var(--background-col);
+	font-size: 0.9rem;
+
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+
+	text-align: center;
+	position: relative;
+}
+
+.ticket-tab div span p {
+	position: relative;
+	bottom: 1px;
+}
+
+.ticket-tab__progress {
+	color: var(--progress-col);
+}
+
+.ticket-tab__progress-value {
+	background-color: var(--progress-col);
+}
+
+.ticket-tab__completed {
+	color: var(--completed-col);
+}
+
+.ticket-tab__completed-value {
+	background-color: var(--completed-col);
+}
+
+.ticket-tab__hold {
+	color: var(--hold-col);
+}
+
+.ticket-tab__hold-value {
+	background-color: var(--hold-col);
+}
+
+.ticket-tab__issue {
+	color: var(--issue-col);
+}
+
+.ticket-tab__issue-value {
+	background-color: var(--issue-col);
+}
+
+.ticket-tab__extend {
+	color: var(--extend-col);
+}
+
+.ticket-tab__extend-value {
+	background-color: var(--extend-col);
+}
+
+.ticket-panel-container {
+	padding: 1rem;
+	width: 90%;
+	margin-top: 0.2rem;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+
+	background-color: var(--background-col-light)
+}
+
+.ticket-panel {
+	margin-top: 0.5rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 1rem;
+}
+
+@media (max-width: 750px) {
+	.ticket-tab {
+		flex-direction: column;
+		gap: 1rem;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+
+		width: 18rem;
+	}
+
+	.ticket-tab div {
+		width: 12rem;
+		text-align: center;
+	}
+}
