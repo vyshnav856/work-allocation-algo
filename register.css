@@ -1,0 +1,21 @@
+.card{
+  height: 30rem;
+}
+.register_select select {
+  background-color: transparent;
+  border: 2px solid var(--accent-col);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+  color: var(--text-col);
+  width:13rem ; 
+}
+
+
+.register-form_branch option {
+  background-color:hsl(203, 20%, 8%);
+  color: #b042ff;
+  font-weight: 700;
+  border: 6px solid transparent;
+  padding: 2rem;
+}
