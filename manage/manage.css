@@ -22,7 +22,7 @@ main {
 }
 
 .ticket-tab {
-	max-width: 45rem;
+	max-width: 90%;
 	min-height: 2rem;
 	margin: 0 auto;
 	padding: 0.5rem 1rem;
@@ -31,18 +31,28 @@ main {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	gap: 1rem;
 
 	background-color: var(--background-col-light);
 }
 
-.ticket-tab div {
-	background-color: var(--background-col-lighter);
+.ticket-tab__container {
+	display: flex;
+	gap: 1rem;
+}
+
+.ticket-tab__item {
 	padding: 0.2rem 0.6rem;
 	border-radius: 10px;
 	font-weight: 500;
+	cursor: pointer;
 }
 
-.ticket-tab div span {
+.ticket-tab__item:hover {
+	background-color: var(--background-col-lighter);
+}
+
+.ticket-tab__value {
 	border-radius: 50%;
 	color: var(--background-col);
 	font-size: 0.9rem;
@@ -55,49 +65,26 @@ main {
 	position: relative;
 }
 
-.ticket-tab div span p {
-	position: relative;
-	bottom: 1px;
-}
-
 .ticket-tab__progress {
 	color: var(--progress-col);
-}
-
-.ticket-tab__progress-value {
-	background-color: var(--progress-col);
 }
 
 .ticket-tab__completed {
 	color: var(--completed-col);
 }
 
-.ticket-tab__completed-value {
-	background-color: var(--completed-col);
+.ticket-tab__create-button {
+	background-color: var(--accent-col);
+	border: 2px solid hsl(275, 100%, 80%);
+	color: var(--text-col);
+	font-weight: 700;
+	border-radius: 10px;
+	padding: 0.2rem 0.6rem;
+	cursor: pointer;
 }
 
-.ticket-tab__hold {
-	color: var(--hold-col);
-}
-
-.ticket-tab__hold-value {
-	background-color: var(--hold-col);
-}
-
-.ticket-tab__issue {
-	color: var(--issue-col);
-}
-
-.ticket-tab__issue-value {
-	background-color: var(--issue-col);
-}
-
-.ticket-tab__extend {
-	color: var(--extend-col);
-}
-
-.ticket-tab__extend-value {
-	background-color: var(--extend-col);
+.ticket-tab__create-button:active {
+	background-color: hsl(275, 100%, 50%);
 }
 
 .ticket-panel-container {

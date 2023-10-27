@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>testing</title>
+		<link rel="stylesheet" href="shared.css">
+		<link rel="stylesheet" href="test.css">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+		<script defer src="main.js"></script>
+	</head>
+
+	<body>
+		<article class="create-ticket">
+			<header>
+				<h2>Create a new ticket!</h2>
+				<button>Cancel</button>
+			</header>
+			
+
+			<form class="create-form">
+				<input id="task-name" type="text" placeholder="Task Name">
+
+				<div class="type-selector">
+					<h4>Type of task</h4>
+					<input name="t-type" type="radio" id="fix-bug">
+					<label for="fix-bug">Bugfix</label>
+					<input name="t-type" type="radio" id="fix-new">
+					<label for="fix-new">New Feature</label>
+					<input name="t-type" type="radio" id="fix-update">
+					<label for="fix-update">Update</label>
+				</div>
+				
+				<div class="type-selector">
+					<h4>Priority Level</h4>
+					<input name="priority" type="radio" id="low-p">
+					<label for="low-p">Low</label>
+					<input name="priority" type="radio" id="med-p">
+					<label for="med-p">Medium</label>
+					<input name="priority" type="radio" id="high-p">
+					<label for="high-p">High</label>
+				</div>
+				
+				<div class="num-select">
+					<label for="difficulty">Difficulty Level</label>
+					<input id="difficulty" value="3" type="number" min="1" max="5">
+				</div>
+				
+				<div class="num-select">
+					<label for="deadline">Days to complete</label>
+					<input id="deadline" type="number" min="0" max="365">
+				</div>
+				
+				<div class="type-dropdown">
+					<label for="skills">Type of developer</label>
+					<select id="skills" name="skills">
+						<option value="choose">Choose</option>
+						<option value="frontend">Frontend</option>
+						<option value="backend">Backend</option>
+						<option value="full-stack">Full Stack</option>
+						<option value="cloud">Cloud</option>
+						<option value="ai-ml">AI/ML</option>
+					</select>
+				</div>
+			
+				<button class="but create-task-sumbit" type="submit">Create new ticket</button>
+			</form>
+		</article>
+	</body>
+</html>
