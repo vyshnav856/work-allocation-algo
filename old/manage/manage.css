@@ -1,0 +1,123 @@
+.main-header__div {
+	justify-content: space-between;
+	align-items: center;
+}
+
+.main-header__username {
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.main-header__username:hover {
+	font-weight: 700;
+}
+
+.chev {
+	width: 1rem;
+	transform: translate(1px, 3px)
+}
+
+main {
+	margin-top: 4rem;
+}
+
+.ticket-tab {
+	max-width: 90%;
+	min-height: 2rem;
+	margin: 0 auto;
+	padding: 0.5rem 1rem;
+	border-radius: 10px;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+
+	background-color: var(--background-col-light);
+}
+
+.ticket-tab__container {
+	display: flex;
+	gap: 1rem;
+}
+
+.ticket-tab__item {
+	padding: 0.2rem 0.6rem;
+	border-radius: 10px;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.ticket-tab__item:hover {
+	background-color: var(--background-col-lighter);
+}
+
+.ticket-tab__value {
+	border-radius: 50%;
+	color: var(--background-col);
+	font-size: 0.9rem;
+
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+
+	text-align: center;
+	position: relative;
+}
+
+.ticket-tab__progress {
+	color: var(--progress-col);
+}
+
+.ticket-tab__completed {
+	color: var(--completed-col);
+}
+
+.ticket-tab__create-button {
+	background-color: var(--accent-col);
+	border: 2px solid hsl(275, 100%, 80%);
+	color: var(--text-col);
+	font-weight: 700;
+	border-radius: 10px;
+	padding: 0.2rem 0.6rem;
+	cursor: pointer;
+}
+
+.ticket-tab__create-button:active {
+	background-color: hsl(275, 100%, 50%);
+}
+
+.ticket-panel-container {
+	padding: 1rem;
+	width: 90%;
+	margin-top: 0.2rem;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+
+	background-color: var(--background-col-light)
+}
+
+.ticket-panel {
+	margin-top: 0.5rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 1rem;
+}
+
+@media (max-width: 750px) {
+	.ticket-tab {
+		flex-direction: column;
+		gap: 1rem;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+
+		width: 18rem;
+	}
+
+	.ticket-tab div {
+		width: 12rem;
+		text-align: center;
+	}
+}

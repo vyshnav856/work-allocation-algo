@@ -1,0 +1,26 @@
+body {
+	height: 100dvh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+h4 {
+	margin-bottom: 1rem;
+}
+
+body a {
+	color: white;
+	text-decoration: none;
+	margin-bottom: 0.2rem;
+	text-decoration: underline;
+}
+
+body a:hover {
+	font-weight: 500;
+}
+
+body a:active {
+	color: orangered;
+}

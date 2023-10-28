@@ -1,31 +1,19 @@
 <?php
 include("../connection/connection.php");
-session_start();
 
 if(isset($_POST['submit']))
 {
 	$email=$_POST['email'];
 	$password=$_POST['password'];
-
     $sel="select * from tbl_manager where manager_email='$email' and  manager_password='$password'";	
 	$m_res=$con->query($sel);
-
-	$sel="select * from tbl_dev where dev_email='$email' and  dev_password='$password'";	
-	$d_res=$con->query($sel);
-
 	if($m_res->num_rows>0)
 	{
 		$row=$m_res->fetch_assoc();
 		$_SESSION['mid']=$row['manager_id'];
-		$_SESSION['mname']=$row['manager_name'];
-		header("location: ../manage/manage.php");
-	}
-	if($d_res->num_rows>0)
-	{
-		$row=$d_res->fetch_assoc();
-		$_SESSION['did']=$row['dev_id'];
-		$_SESSION['dname']=$row['dev_name'];
-		header("location: ../dev/dev.php");
+		$_SESSION['name']=$row['manager_name'];
+		$_SESSION['pwd']=$row['manager_password'];
+		header("location: ../manage/manage.html");
 	}
 	else
 	{
@@ -68,10 +56,9 @@ if(isset($_POST['submit']))
 
 					<button class="login-form__submit but" type="submit" name="submit">Login</button>
 
-					<a class="login-form__create" href="../register/register.php">Create a new account</a>
+					<a class="login-form__create" href="register.html">Create a new account</a>
 				</form>
 			</div>
 		</main>
 	</body>
 </html>
-

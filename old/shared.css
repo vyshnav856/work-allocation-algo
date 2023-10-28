@@ -1,0 +1,145 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--text-col: whitesmoke;
+	--background-col: hsl(203, 20%, 8%);
+	--background-col-light: hsl(202, 22%, 12%);
+	--background-col-lighter: hsl(202, 22%, 16%);  
+	--accent-col: #b042ff;
+	--accent-col-active: #b042ff9f;
+
+	--progress-col: rgb(25, 165, 25);
+	--completed-col: rgb(115, 115, 232);
+	--hold-col: rgb(255, 204, 0);
+	--issue-col: red;
+	--extend-col: orange;
+
+	--shadow: -1px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	color: var(--text-col);
+	background-color: var(--background-col);
+}
+
+.main-header {
+	/* height: 3rem; */
+	background-color: var(--accent-col);
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.main-header__div {
+	height: 100%;
+	width: 98%;
+	padding: 0.5rem;
+
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+
+.main-header__title {
+	font-size: 1.4rem;
+}
+
+.but {
+	background-color: var(--accent-col);
+	width: fit-content;
+	padding: 0.4rem 3rem;
+	color: var(--text-col);
+	border: none;
+	border-radius: 10px;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.but:active {
+	background-color: var(--accent-col-active)
+}
+
+.login-form__create {
+	font-size: 0.8rem;
+	text-decoration: none;
+	color: #00add8;
+}
+
+.login-form__create:hover {
+	text-decoration: underline;
+}
+
+.ticket {
+	background-color: var(--background-col-lighter);
+	box-shadow: -1px 2px 5px rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+	padding: 0.75rem;
+	width: 12rem;
+	font-size: 0.8rem;
+	font-weight: 500;
+}
+
+/* name, type, priority, deadline, status */
+
+.ticket__name {
+	font-size: 1.1rem;
+	margin-bottom: 0.75rem;
+	background-color: var(--background-col-light);
+	border-radius: 10px;
+	padding: 0.4rem 0.6rem;
+	box-shadow: -1px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.ticket__type {
+	width: fit-content;
+	background-color: hsl(0, 0%, 10%);
+	padding: 0.2rem 0.5rem;
+	border-radius: 100rem;
+	border: 2px solid white;
+	margin-bottom: 0.75rem;
+}
+
+.ticket__priority {
+	padding: 0.2rem 0.5rem;
+	border-radius: 100rem;
+	border: 2px solid hsl(0, 85%, 45%);
+	background-color: hsl(0, 85%, 7%);
+	margin-bottom: 0.75rem;
+	width: fit-content;
+}
+
+.ticket__deadline {
+	margin-bottom: 0.75rem;
+	padding: 0.2rem 0.5rem;
+	border-radius: 100rem;
+	border: 2px solid hsl(222, 88%, 48%);
+	background-color: hsl(222, 88%, 10%);
+	width: fit-content;
+}
+
+.ticket__status {
+	width: fit-content;
+	margin-bottom: 0.5rem;
+	padding: 0.2rem 0.5rem;
+	border-radius: 100rem;
+	border: 2px solid var(--hold-col);
+	margin-bottom: 0.75rem;
+	background-color: hsl(48, 100%, 10%);
+}
+
+.ticket__details {
+	font-weight: 500;
+	color: rgb(117, 103, 212);
+}
+
+.ticket__details:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
